@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Генератор паролів</title>
     </head>
-        <body style="
+    <body style="
         background-image: url('background.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -17,12 +17,16 @@
                     <div class="card center-align">
                         <div class="card-content">
                             <h2 class="card-title">Генерація паролю</h2>
+                            <label>Маска для генерації</label>
+                            <input class="mask center-align" type="text" value="{прикметник}{іменник}{цифра}{цифра}">
+                            <label>Згенерований пароль</label>
                             <input class="password center-align" type="text">
                         </div>
                         <div class="card-action">
-                            <a class="waves-effect waves-light btn blue-grey" id="simple">Простий</a>
-                            <a class="waves-effect waves-light btn blue-grey" id="middle">Середній</a>
-                            <a class="waves-effect waves-light btn blue-grey" id="strong">Складний</a>
+                            <a class="waves-effect waves-light btn blue-grey mask" mask="{прикметник}{іменник}{цифра}{цифра}">Простий</a>
+                            <a class="waves-effect waves-light btn blue-grey mask" mask="{прикметник-середній}{Іменник-середній}{цифра}{цифра}">Середній</a>
+                            <a class="waves-effect waves-light btn blue-grey mask" mask="{прикметник-складний}{Іменник-складний}{цифра}{цифра}">Складний</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="waves-effect waves-light btn blue-grey darken-4 generate">Згенерувати</a>
                         </div>
                     </div>
                 </div>
