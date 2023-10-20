@@ -19,25 +19,26 @@ function genPassword(list1=[], list2=[], type="simple"){
   
     const letters = Object.keys(replaces).filter(letter => Array.from(words.replace('[A-Z]','')).indexOf(letter) !== -1);
     const letter = letters[Math.floor(Math.random() * letters.length)];
-      
-    if (type == "strong"){
-        text = words.replace(letter, replaces[letter]);
-    }else if (type == "strongest"){
-        text = words
-        for (const [key, value] of Object.entries(replaces)) {
-        text = text.replaceAll(key, value);
-      }
-    }else{
+
+    if (type == "simple"){
         text = words.toLowerCase();
     }
+    if (type == "middle"){
+        text = words.replace(letter, replaces[letter]);
+    }
+    if (type == "strong"){
+        text = words
+        for (const [key, value] of Object.entries(replaces)) {
+            text = text.replaceAll(key, value);
+        }
+    }
     return `${text}${numbers}`;
-  }
+}
   
-  document.querySelectorAll('#simple, #strong, #strongest').forEach(button => {
+document.querySelectorAll('.btn').forEach(button => {
     button.addEventListener('click', function() {
-      list1 = document.querySelector('.list1').textContent.trim().split('\n');
-      list2 = document.querySelector('.list2').textContent.trim().split('\n');
-      document.querySelector('.password').value=genPassword(list1, list2, button.id);
+        list1 = document.querySelector('.list1').textContent.trim().split('\n');
+        list2 = document.querySelector('.list2').textContent.trim().split('\n');
+        document.querySelector('.password').value=genPassword(list1, list2, button.id);
     });
-  });
-  
+});
