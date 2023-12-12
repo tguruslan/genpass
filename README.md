@@ -2,4 +2,4 @@
 password generator
 
 
-[link](https://tguruslan.github.io/genpass/)
+[link](https://pass.root.sx/)
