@@ -1,0 +1,50 @@
+{
+    "background_color": "#ffffff",
+    "description": "Генератор складних паролів які легко запамятати",
+    "dir": "auto",
+    "display": "standalone",
+    "name": "Генератор паролів",
+    "orientation": "any",
+    "scope": "/genpass/",
+    "short_name": "Генератор паролів",
+    "start_url": "/genpass/",
+    "theme_color": "#ffffff",
+    "id": "genpass",
+    "lang": "uk",
+    "icons": [
+      {
+        "src": "icons/icon-96-96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "icons/icon-48-48.png",
+        "sizes": "48x48",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-72-72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-144-144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-192-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-512-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "categories": [
+      "security"
+    ]
+  }
